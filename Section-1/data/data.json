@@ -1,0 +1,41 @@
+[
+    
+    {
+        "restaurant": "Kebab Land",
+        "foodName": "Doner kip broodtje",
+        "foodType": "doner",
+        "protein": "chicken",
+        "calories": 975
+        
+    },
+
+    {
+        "foodName" : "Doner kalf broodtje",
+        "foodType" : "doner",
+        "protein" : "kalf",
+        "calories" : 945
+    },
+
+    {
+        "foodName": "Patat zonder",
+        "foodType": "snack",
+        "protein": "aardappel",
+        "calories": 1005
+    },
+
+    {
+        "foodName": "Patat met saus",
+        "foodType": "snack",
+        "protein": "aardappel",
+        "calories": 965
+    },
+
+    {
+        "foodName": "Crispy chicken",
+        "foodType": "snack",
+        "protein": "kip",
+        "calories": 1095
+    }
+
+
+]
