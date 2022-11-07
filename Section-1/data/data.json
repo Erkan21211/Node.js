@@ -1,7 +1,7 @@
 [
     
-    {
-      "restaurant": "Kebab Land",
+    {  
+      "id": "1",
       "image": "🥙",
       "foodName": "Doner kip broodtje",
       "foodType": "doner",
@@ -9,10 +9,12 @@
       "calories": 975,
       "prijs": "6.00",
       "From" : "Turkiye",
+      "hoeveel": "1",
       "description": "a dish consisting of small pieces of meat, tomatoes, onions, etc, threaded onto skewers and grilled, generally over charcoal Also called: shish kebab, kabob, cabob."
     },
 
     {
+        "id": "2",
         "foodName" : "Doner kalf broodtje",
         "image": "🥙",
         "foodType" : "doner",
@@ -20,38 +22,46 @@
         "calories" : 945,
         "prijs": "6.00",
         "From" : "Turkiye",
+        "hoeveel": "1",
         "description": "a dish consisting of small pieces of meat, tomatoes, onions, etc, threaded onto skewers and grilled, generally over charcoal Also called: shish kebab, kabob, cabob."
     },
 
     {
+        "id": "3",
         "foodName": "Patat zonder",
-        "image": "🥙",
+        "image": "🥔",
         "foodType": "snack",
         "protein": "aardappel",
         "calories": 1005,
         "prijs": "6.00",
         "From" : "Turkiye",
+        "hoeveel": "1",
         "description": "a dish consisting of small pieces of meat, tomatoes, onions, etc, threaded onto skewers and grilled, generally over charcoal Also called: shish kebab, kabob, cabob."
     },
 
     {
+        "id": "4",
         "foodName": "Patat met saus",
-        "image": "🥙",
+        "image": "🥔",
         "foodType": "snack",
         "protein": "aardappel",
         "calories": 965,
         "prijs": "6.00",
         "From" : "Turkiye",
+        "hoeveel": "1",
         "description": "a dish consisting of small pieces of meat, tomatoes, onions, etc, threaded onto skewers and grilled, generally over charcoal Also called: shish kebab, kabob, cabob."
     },
 
     {
+        "id": "5",
         "foodName": "Crispy chicken",
-        "image": "🥙",
+        "image": "🍗",
         "foodType": "snack",
         "protein": "kip",
         "calories": 1095,
         "prijs": "6.00",
+        "From" : "Turkiye",
+        "hoeveel": "1",
         "description": "a dish consisting of small pieces of meat, tomatoes, onions, etc, threaded onto skewers and grilled, generally over charcoal Also called: shish kebab, kabob, cabob."
     }
 
