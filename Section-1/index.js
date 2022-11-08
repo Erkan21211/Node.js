@@ -6,14 +6,15 @@ const http = require('http');
 const port = '8000';
 const localhost = '127.0.0.1';
 
-const replace = (temp, product) => {
+ const replace = (temp, product) => {
     let output = temp.replace(/{%PRODUCTNAME%}/g, product.foodName);
+    output = output.replace(/{%DESCRIPTION%}/g, product.description);
     output = output.replace(/{%IMAGE%}/g, product.image);
     output = output.replace(/{%PRIJS%}/g, product.prijs);
     output = output.replace(/{%FROM%}/g, product.From);
     output = output.replace(/{%NUTRIENTS%}/g, product.protein);
     output = output.replace(/{%HOEVEEL%}/g, product.hoeveel); 
-    output = output.replace(/{%DESCRIPTION%}/g, product.description);
+    output = output.replace(/{%PROTEIN%}/g, product.protein);
     output = output.replace(/{%ID%}/g, product.id);
     
     if(product.From != "Turkiye") output = output.replace(/{%NOT_KEBAB%}/g, 'not-kebab');
@@ -30,10 +31,10 @@ const dataObject = JSON.parse(data);
 // SERVER
 const server = http.createServer((req, res) => {
     // url routing 
-    const PathName = req.url;
+    const { query, pathname } = url.parse(req.url, true);
 
     // overview pagina
-    if(PathName === '/' || PathName === '/overview') {
+    if(pathname === '/' || pathname === '/overview') {
         res.writeHead(200, { 'Content-type': 'text/html'});
         	
         // loop
@@ -42,12 +43,16 @@ const server = http.createServer((req, res) => {
 
         res.end(output);
     //  api pagina
-    } else if (PathName === '/api') {
+    } else if (pathname === '/api') {
         res.writeHead(200, { 'Content-type': 'application/json'});
         res.end(data);
     // product pagina
-    } else if(PathName === '/product') {
-        res.end('<h1>Products<h1>');
+    } else if(pathname === '/product') {
+        const query_product = dataObject[query.id];
+        const product_output = replace(product_page, query_product);
+
+        res.writeHead(200, { 'Content-type': 'text/html' });
+        res.end(product_output);
     // error pagina
     } else {
         res.writeHead(404, { 'Content-type': 'text/html' });
